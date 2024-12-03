@@ -128,6 +128,8 @@ def all_booking_info(booking):
         Passenger.print_passenger_info(passenger)
 
 def exit_program():
-    print("Goodbye!")
+    print('------------------')
+    print('Fly with you soon!')
+    print('------------------')
     exit()
     

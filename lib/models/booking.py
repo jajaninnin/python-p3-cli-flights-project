@@ -137,7 +137,7 @@ class Booking:
     @classmethod
     def print_booking_info(cls, booking):
         table = Table(title="Booking Info")
-        table.add_column("ID", header_style="bold magenta")
+        table.add_column("ID", header_style="bold magenta", style="red")
         table.add_column("Passenger ID", header_style="bold magenta")
         table.add_column("Flight ID", header_style="bold magenta")
         table.add_column("Seat", header_style="bold magenta")
@@ -157,7 +157,7 @@ class Booking:
         '''
         bookings = CURSOR.execute(sql).fetchall()
         table = Table(title="Booking Info")
-        table.add_column("ID", header_style="bold magenta")
+        table.add_column("ID", header_style="bold magenta", style='red')
         table.add_column("Passenger ID", header_style="bold magenta")
         table.add_column("Flight ID", header_style="bold magenta")
         table.add_column("Seat", header_style="bold magenta")

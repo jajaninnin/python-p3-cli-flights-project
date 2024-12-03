@@ -31,6 +31,9 @@ def main():
         main_menu()
 
 def main_menu():
+    print('---------------')
+    print('Welcome Aboard!')
+    print('---------------')
     print("Please select an option:")
     print("0. Exit the program")
     print("1. Flights information")

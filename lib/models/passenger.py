@@ -149,7 +149,7 @@ class Passenger:
     @classmethod
     def print_passenger_info(cls, passenger):
         table = Table(title="Passenger Info")
-        table.add_column("ID", header_style="bold magenta")
+        table.add_column("ID", header_style="bold magenta", style="red")
         table.add_column("First Name", header_style="bold magenta")
         table.add_column("Last Name", header_style="bold magenta")
         table.add_column("Age", header_style="bold magenta")
@@ -171,7 +171,7 @@ class Passenger:
         '''
         passengers = CURSOR.execute(sql).fetchall()
         table = Table(title="Passenger Info")
-        table.add_column("ID", header_style="bold magenta")
+        table.add_column("ID", header_style="bold magenta", style="red")
         table.add_column("First Name", header_style="bold magenta")
         table.add_column("Last Name", header_style="bold magenta")
         table.add_column("Age", header_style="bold magenta")

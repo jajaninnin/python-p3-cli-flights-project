@@ -180,7 +180,7 @@ class Flight:
     @classmethod
     def print_flight_info(cls, flight):
         table = Table(title="Flight Info")
-        table.add_column("ID", header_style="bold magenta")
+        table.add_column("ID", header_style="bold magenta", style="red")
         table.add_column("Name", header_style="bold magenta")
         table.add_column("Number", header_style="bold magenta")
         table.add_column("Origin", header_style="bold magenta")
@@ -206,7 +206,7 @@ class Flight:
         '''
         flights = CURSOR.execute(sql).fetchall()
         table = Table(title="Flight Info")
-        table.add_column("ID", header_style="bold magenta")
+        table.add_column("ID", header_style="bold magenta", style="red")
         table.add_column("Name", header_style="bold magenta")
         table.add_column("Number", header_style="bold magenta")
         table.add_column("Origin", header_style="bold magenta")
