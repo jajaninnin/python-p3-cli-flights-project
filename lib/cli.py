@@ -79,10 +79,11 @@ def create_flight_cli_options():
     number = input("Flight number > ")
     origin = input("Origin City > ")
     destination = input("Destination City > ")
-    departure_time = input("Departure Time > ")
-    arrival_time = input("Arrival Time > ")
+    departure_time = input("Departure Time((00:00 am) format) > ")
+    arrival_time = input("Arrival Time(00:00 am) format > ")
     new_flight = create_flight(name, int(number), origin, destination, departure_time, arrival_time)
-    Flight.print_flight_info(new_flight)
+    if new_flight != None:
+        Flight.print_flight_info(new_flight)
 
 def find_flight_cli_options(id):
     flight = find_flight(id)
@@ -138,7 +139,8 @@ def create_passenger_cli_options():
     age = input("Age > ")
     passport = input("Passport > ")
     new_passenger = create_passenger(first_name, last_name, int(age), passport)
-    Passenger.print_passenger_info(new_passenger)
+    if (new_passenger != None):
+        Passenger.print_passenger_info(new_passenger)
 
 def find_passenger_cli_options(id):
     passenger = find_passenger(id) 
@@ -194,7 +196,8 @@ def create_booking_cli_options():
     flight_id = input("Flight ID > ")
     seat = input("Seat: > ")
     new_booking = create_booking(passenger_id, flight_id, seat)
-    Booking.print_booking_info(new_booking)
+    if new_booking != None:
+        Booking.print_booking_info(new_booking)
 
 def find_booking_cli_options(id):
     booking = find_booking(id) 

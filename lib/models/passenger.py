@@ -189,10 +189,26 @@ class Passenger:
         console.print(table)
     
     @classmethod
+    def check_if_passport_exists(cls, new_passenger):
+        sql = '''
+            SELECT * FROM passengers
+            WHERE passport = ?
+        '''
+        row = CURSOR.execute(sql, (new_passenger.passport,)).fetchone()
+        if row:
+            print("A person with this passport already exists, try another one")
+            return True
+        else:
+            return False
+
+    @classmethod
     def create(cls, first_name, last_name, age, passport):
         new_passenger = cls(first_name, last_name, age, passport)
-        new_passenger.save()
-        return new_passenger
+        if cls.check_if_passport_exists(new_passenger):
+            return None
+        else:
+            new_passenger.save()
+            return new_passenger
 
     @classmethod
     def create_instance(cls, passenger):

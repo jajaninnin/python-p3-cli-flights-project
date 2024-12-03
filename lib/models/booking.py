@@ -67,6 +67,20 @@ class Booking:
             return True
         else:
             return False
+    
+    @classmethod
+    def check_if_already_on_flight(cls, passenger_id, flight_id):
+        sql = '''
+            SELECT * FROM bookings 
+            WHERE passenger_id = ?
+            AND flight_id = ?
+        '''
+        passenger_already_on_flight = CURSOR.execute(sql, (passenger_id, flight_id)).fetchone()
+        if (passenger_already_on_flight):
+            print("Passenger is already booked on this flight, try another one")
+            return True
+        else:
+            return False
 
     @classmethod
     def create_table(cls):
@@ -160,12 +174,14 @@ class Booking:
     
     @classmethod
     def create(cls, passenger_id, flight_id, seat):
-        if not cls.check_if_seat_is_booked(seat, flight_id):
+        is_seat_booked = cls.check_if_seat_is_booked(seat, flight_id)
+        is_on_flight = cls.check_if_already_on_flight(passenger_id, flight_id)
+        if is_seat_booked or is_on_flight:
+            return None
+        else:
             new_booking = cls(passenger_id, flight_id, seat)
             new_booking.save()
             return new_booking
-        else:
-            return None
 
     @classmethod
     def create_instance(cls, booking):

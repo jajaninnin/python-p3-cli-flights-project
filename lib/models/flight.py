@@ -41,7 +41,7 @@ class Flight:
             else:
                 return ValueError("Flight number must be between 1 and 5 digits.")
         else:
-            raise TypeError("Flight number must be a int")
+            raise TypeError("Flight number must be an int")
     
     @property
     def origin(self):
@@ -229,10 +229,27 @@ class Flight:
         console.print(table)
 
     @classmethod
+    def check_if_flight_exists(cls, flight):
+        sql = '''
+            SELECT * FROM flights
+            WHERE name = ?
+            AND number = ?
+        '''
+        row = CURSOR.execute(sql, (flight.name, flight.number)).fetchone()
+        if row:
+            print("This flight already exists, try another one")
+            return True
+        else:
+            return False
+
+    @classmethod
     def create(cls, name, number, origin, destination, departure_time, arrival_time):
         new_flight = cls(name, number, origin, destination, departure_time, arrival_time)
-        new_flight.save()
-        return new_flight
+        if cls.check_if_flight_exists(new_flight):
+            return None
+        else:
+            new_flight.save()
+            return new_flight
 
     @classmethod
     def create_instance(cls, flight):
