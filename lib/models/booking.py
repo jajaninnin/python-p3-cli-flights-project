@@ -1,6 +1,6 @@
 from models.__init__ import CONN, CURSOR
-# from models.flight import Flight
-# from models.passenger import Passenger
+from models.flight import Flight
+from models.passenger import Passenger
 from rich.console import Console
 from rich.table import Table
 
@@ -176,7 +176,15 @@ class Booking:
     def create(cls, passenger_id, flight_id, seat):
         is_seat_booked = cls.check_if_seat_is_booked(seat, flight_id)
         is_on_flight = cls.check_if_already_on_flight(passenger_id, flight_id)
+        passenger_does_not_exist = Passenger.find_by_id(passenger_id) == None
+        flight_does_not_exist = Flight.find_by_id(flight_id) == None
         if is_seat_booked or is_on_flight:
+            return None
+        elif passenger_does_not_exist:
+            print("Passenger id does not exist. Try another one.")
+            return None
+        elif flight_does_not_exist:
+            print("Flight id does not exist. Try another one.")
             return None
         else:
             new_booking = cls(passenger_id, flight_id, seat)
