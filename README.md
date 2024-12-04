@@ -1,49 +1,109 @@
-# Phase 3 Flights Project 
+# Book My Wings
+
+## Phase 3 CLI + ORM Project
 
 ## Introduction
 
-Welcome aboard to my flights project!
-Intro here.
+Welcome aboard!
+
+**"Book My Wings"** is a user-friendly CLI + ORM designed to simplify your travel planning. Whether you're looking for available flights, signing up as a passenger, or making a booking, this app makes the process quick and hassle-free. With a seamless interface and real-time flight options, **"Book My Wings"** ensures you can easily find and secure your next flight in just a few taps. Travel made simple using a CLI.
 
 ---
 
 ## Generating Your Environment
 
-You might have noticed in the file structure- there's already a Pipfile!
-
-Install any additional dependencies you know you'll need for your project by
-adding them to the `Pipfile`. Then run the commands:
+1. Install and run the commands in your terminal:
 
 ```console
 pipenv install
+```
+
+2. Run or activate your virtual environment in your terminal:
+
+```console
 pipenv shell
 ```
 
----
+3. Change your directory in your terminal:
 
-## Generating Your CLI
+```console
+cd lib
+```
 
-A CLI is, simply put, an interactive script and prompts the user and performs
-operations based on user input.
+4. Run the python CLI file in your terminal:
 
-You can run the template CLI with `python lib/cli.py`, or include the shebang
-and make it executable with `chmod +x`. The template CLI will ask for input, do
-some work, and accomplish some sort of task.
+```console
+python cli.py
+```
 
-Of course, you will update `lib/cli.py` with prompts that are appropriate for
-your application, and you will update `lib/helpers.py` to replace `helper_1()`
-with a useful function based on the specific problem domain you decide to
-implement, along with adding other helper functions to the module.
+OPTIONAL: You can skip step 3 and 4, by directly running the CLI file from your virtual environment by typing this on your terminal:
 
-In the `lib/models` folder, you should rename `model_1.py` with the name of a
-data model class from your specific problem domain, and add other classes to the
-folder as needed. The file `lib/models/__init__.py` has been initialized to
-create the necessary database constants. You need to add import statements to
-the various data model classes in order to use the database constants.
+```console
+python lib/cli.py
+```
+
+You can only pick either step 3&4 or Optional.
 
 ---
-## Conclusion
 
-Thank you for visiting!
+## Flow Chart 
+
+Here is the flow chart of the CLI:
+
+![Flow Chart](image.png)
 
 ---
+
+## How to Use the CLI
+
+When you run the CLI file, it will ask you to input from the choices given. 
+
+For example, to view all the available flights:
+
+On the Main menu, click **"1. Flights Information"**
+
+The CLI will give you different options, then you have to type in **"1. Get all Flights"**
+
+That will give you the input of all the flights the are available.
+
+![All the Flights](image-1.png)
+
+You can also choose **"Back to Main Menu"** to view **"2. Passenger Information"** or **"3. Bookings Information"**
+
+---
+
+## Key Features
+
+### Flight Information
+
+Located as option 1 on Main menu, the user has the capability to view all flights, create a flight, find a flight by ID, and go back to main menu.
+
+If the user picked "Create a Flight", the use has to input all the information needed namely, flight name, flight number, origin city, destination city, departure time, and arrival time.
+
+If the user picked "Find a Flight by ID", the user has to input a valid flight ID. Once the flight has been located, the user has then more options for that specific flight with the ID inputed, like deleting the flight, getting all the passengers of that flight, and getting all the bookings for that flight. 
+
+### Passenger Information
+
+Located as option 2 on Main menu, the user has the capability to view all passengers, create a passengers, find a passengers by ID, and go back to main menu.
+
+If the user picked "Create a passenger", the use has to input all the information needed namely, first name, last name, age, and passport number.
+
+If the user picked "Find a passenger by ID", the user has to input a valid passenger ID. Once the passenger has been located, the user has then more options for that specific passenger with the ID inputed, like deleting the passenger, getting all the flights of that passenger, and getting all the bookings for that passenger. 
+
+ ### Booking Information
+
+Located as option 3 on Main menu, the user has the capability to view all bookings, create a booking, find a booking by ID, and go back to main menu.
+
+If the user picked "Create a booking", the use has to input all the information needed namely, related passenger ID, related flight ID, and seat.
+
+If the user picked "Find a booking by ID", the user has to input a valid booking ID. Once the booking has been located, the user has then more options for that specific booking with the ID inputed, like deleting the booking, getting all the flight and passenger information of that booking ID and going back to main menu. 
+
+---
+
+## Contributions
+
+We welcome contributions!
+
+---
+
+## Thank you for visiting!
