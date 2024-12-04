@@ -14,7 +14,7 @@ Welcome aboard!
 
 1. Fork and clone this repository:
 
-Clone this repository in your terminal: [github](git@github.com:jajaninnin/python-p3-cli-flights-project.git)
+Clone this repository in your terminal: git@github.com:jajaninnin/python-p3-cli-flights-project.git
 
 Navigate to the project directory in your terminal: cd python-p3-v2-final-project-template
 
