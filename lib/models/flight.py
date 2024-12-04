@@ -282,11 +282,18 @@ class Flight:
             DELETE FROM flights
             WHERE id = ?
         """
+        sql_booking = '''
+            DELETE FROM bookings
+            WHERE flight_id = ?
+        '''
         if flight_to_delete:
             CURSOR.execute(sql, (flight_to_delete.id,))
+            CONN.commit()
+            CURSOR.execute(sql_booking, (flight_to_delete.id,))
             CONN.commit()
             return 'Successfully deleted'
         else:
             return None
+        
         
     
