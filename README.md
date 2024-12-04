@@ -1,22 +1,22 @@
-# Book My Wings
+# <span style="color: cyan">Jet Set Go!</span> 🛬
 
-## Phase 3 CLI + ORM Project
+## Phase 3 CLI + ORM Project 🛬
 
-## Introduction
+## Introduction 🛬
 
-Welcome aboard!
+Welcome aboard! 🛬
 
-**"Book My Wings"** is a user-friendly CLI + ORM designed to simplify your travel planning. Whether you're looking for available flights, signing up as a passenger, or making a booking, this app makes the process quick and hassle-free. With a seamless interface and real-time flight options, **"Book My Wings"** ensures you can easily find and secure your next flight in just a few taps. Travel made simple using a CLI.
+**"Jet Set Go!"** is a user-friendly CLI + ORM designed to simplify your travel planning. Whether you're looking for available flights, signing up as a passenger, or making a booking, this app/cli makes the process quick and hassle-free. **"Jet Set Go!"** ensures you can easily find and secure your next flight in just a few taps. Travel made simple using a CLI.
 
 ---
 
-## Generating Your Environment
+## Generating Your Environment 🛬
 
 1. Fork and clone this repository:
 
 Clone this repository in your terminal: git@github.com:jajaninnin/python-p3-cli-flights-project.git
 
-Navigate to the project directory in your terminal: cd python-p3-v2-final-project-template
+Navigate to the project directory in your terminal: cd python-p3-cli-flights-project
 
 2. Install and run the commands in your terminal:
 
@@ -52,15 +52,15 @@ You can only pick either step 4&5 or Optional route.
 
 ---
 
-## Flow Chart 
+## Flow Chart 🛬
 
-Here is the flow chart of the CLI:
+Here is a rough flow chart of the CLI:
 
-![Flow Chart](image.png)
+![Flow Chart](images/image.png)
 
 ---
 
-## How to Use the CLI
+## How to Use the CLI 🛬
 
 When you run the CLI file, it will ask you to input from the choices given. 
 
@@ -70,17 +70,17 @@ On the Main menu, click **"1. Flights Information"**
 
 The CLI will give you different options, then you have to type in **"1. Get all Flights"**
 
-That will give you the input of all the flights the are available.
+That will give you the input of all the flights the are available seen in this image:
 
-![All the Flights](image-1.png)
+![All the Flights](images/image-1.png)
 
-You can also choose **"Back to Main Menu"** to view **"2. Passenger Information"** or **"3. Bookings Information"**
+Back to the main menu, you can also choose **"0. Exit the Program"** or **"2. Passenger Information"** or **"3. Bookings Information"**
 
 ---
 
-## Key Features
+## Key Features 🛬
 
-### Flight Information
+### Flight Information 🛬
 
 Located as option 1 on Main menu, the user has the capability to view all flights, create a flight, find a flight by ID, and go back to main menu.
 
@@ -88,7 +88,7 @@ If the user picked "Create a Flight", the use has to input all the information n
 
 If the user picked "Find a Flight by ID", the user has to input a valid flight ID. Once the flight has been located, the user has then more options for that specific flight with the ID inputed, like deleting the flight, getting all the passengers of that flight, and getting all the bookings for that flight. 
 
-### Passenger Information
+### Passenger Information 👤
 
 Located as option 2 on Main menu, the user has the capability to view all passengers, create a passengers, find a passengers by ID, and go back to main menu.
 
@@ -96,7 +96,7 @@ If the user picked "Create a passenger", the use has to input all the informatio
 
 If the user picked "Find a passenger by ID", the user has to input a valid passenger ID. Once the passenger has been located, the user has then more options for that specific passenger with the ID inputed, like deleting the passenger, getting all the flights of that passenger, and getting all the bookings for that passenger. 
 
- ### Booking Information
+ ### Booking Information 🛬
 
 Located as option 3 on Main menu, the user has the capability to view all bookings, create a booking, find a booking by ID, and go back to main menu.
 
@@ -106,10 +106,10 @@ If the user picked "Find a booking by ID", the user has to input a valid booking
 
 ---
 
-## Contributions
+## Contributions 🛬
 
 We welcome contributions!
 
 ---
 
-## Thank you for visiting!
+## Thank you for visiting Jet Set Go! 🛬

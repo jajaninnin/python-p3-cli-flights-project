@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="I1Fg8LUBB_pOmwKjLKc8" name="Page-1">
-        <mxGraphModel dx="929" dy="1711" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="991" dy="1949" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -32,7 +32,7 @@
                     <mxGeometry y="150" width="170" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="134" value="Flight Attributes" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="190" y="-280" width="170" height="240" as="geometry"/>
+                    <mxGeometry x="190" y="-270" width="170" height="240" as="geometry"/>
                 </mxCell>
                 <mxCell id="135" value="Flight name, str" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="134" vertex="1">
                     <mxGeometry y="30" width="170" height="30" as="geometry"/>
@@ -126,7 +126,7 @@
                 <mxCell id="176" value="3. Get all Bookings on this Flight ID" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="172" vertex="1">
                     <mxGeometry y="130" width="170" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="178" value="6. Back to main menu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="172" vertex="1">
+                <mxCell id="178" value="4. Back to main menu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="172" vertex="1">
                     <mxGeometry y="180" width="170" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="179" value="Find Passenger Options" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -231,7 +231,7 @@
                 <mxCell id="221" value="3. Booking Information" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="660" y="-1030" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="228" value="0. Exit the Program" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="228" value="0. Exit the Program" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="20" y="-1030" width="130" height="30" as="geometry"/>
                 </mxCell>
             </root>
