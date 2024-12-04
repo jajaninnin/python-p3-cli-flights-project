@@ -20,7 +20,7 @@ class Passenger:
     def first_name(self, new_first_name):
         if isinstance(new_first_name, str):
             if 0 < len(new_first_name) <= 10:
-                self._first_name = new_first_name
+                self._first_name = new_first_name.capitalize()
             else:
                 return ValueError("Passenger first name must be 1-10 char.")
         else:
@@ -34,7 +34,7 @@ class Passenger:
     def last_name(self, new_last_name):
         if isinstance(new_last_name, str):
             if 0 < len(new_last_name) <= 10:
-                self._last_name = new_last_name
+                self._last_name = new_last_name.capitalize()
             else:
                 return ValueError("Passenger last name must be 1-10 char.")
         else:
@@ -62,7 +62,7 @@ class Passenger:
     def passport(self, new_passport):
         if isinstance(new_passport, str):
             if 0 < len(new_passport) <= 10:
-                self._passport = new_passport
+                self._passport = new_passport.upper()
             else:
                 raise ValueError("Passenger passport must be 1-10 char.")
         else:

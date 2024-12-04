@@ -48,7 +48,7 @@ class Booking:
     def seat(self, new_seat):
         if isinstance(new_seat, str):
             if 0 < len(new_seat) <= 3:
-                self._seat = new_seat
+                self._seat = new_seat.upper()
             else:
                 raise ValueError("Seat must be 1-3 char.")
         else:

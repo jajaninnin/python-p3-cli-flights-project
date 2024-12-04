@@ -20,10 +20,10 @@ class Flight:
     def name(self, new_name):
         if not hasattr(self, "_name"):
             if isinstance(new_name, str):
-                if 0 < len(new_name) <= 7:
-                    self._name = new_name
+                if 0 < len(new_name) <= 6:
+                    self._name = new_name.upper()
                 else:
-                    raise ValueError("Flight name must be 1-7 char.")
+                    raise ValueError("Flight name must be 1-6 char.")
             else:
                 raise TypeError("Flight name must be of type str.")
         else:
@@ -50,10 +50,10 @@ class Flight:
     @origin.setter
     def origin(self, new_origin):
         if isinstance(new_origin, str):
-            if 0 < len(new_origin) <= 10:
-                self._origin = new_origin
+            if 0 < len(new_origin) <= 4:
+                self._origin = new_origin.upper()
             else:
-                return ValueError("Flight origin must be 1-10 char.")
+                return ValueError("Flight origin must be 1-4 char.")
         else:
             raise TypeError("Flight origin must be a str")
 
@@ -64,10 +64,10 @@ class Flight:
     @destination.setter
     def destination(self, new_destination):
         if isinstance(new_destination, str):
-            if 0 < len(new_destination) <= 10:
-                self._destination = new_destination
+            if 0 < len(new_destination) <= 4:
+                self._destination = new_destination.upper()
             else:
-                return ValueError("Flight destination must be 1-10 char.")
+                return ValueError("Flight destination must be 1-4 char.")
         else:
             raise TypeError("Flight destination must be a str")
     
