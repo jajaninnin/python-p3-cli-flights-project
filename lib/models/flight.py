@@ -245,12 +245,15 @@ class Flight:
 
     @classmethod
     def create(cls, name, number, origin, destination, departure_time, arrival_time):
-        new_flight = cls(name, number, origin, destination, departure_time, arrival_time)
-        if cls.check_if_flight_exists(new_flight):
-            return None
-        else:
-            new_flight.save()
-            return new_flight
+        try:
+            new_flight = cls(name, number, origin, destination, departure_time, arrival_time)
+            if cls.check_if_flight_exists(new_flight):
+                return None
+            else:
+                new_flight.save()
+                return new_flight
+        except:
+            print("Flight info invalid, please try again.")
 
     @classmethod
     def create_instance(cls, flight):
@@ -296,5 +299,7 @@ class Flight:
         else:
             return None
         
+    def __repr__(self):
+        return f"<Flight id={self.id} name={self.name} number={self.number} origin={self.origin} destination={self.destination} departure_time={self.departure_time} arrival_time={self.arrival_time}>"
         
     

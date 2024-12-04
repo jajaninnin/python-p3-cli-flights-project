@@ -36,28 +36,28 @@ def create_booking(passenger_id, flight_id, seat):
 def delete_flight(id):
     result = Flight.delete(id)
     if (result == None):
-        print("Flight ID invalid, please try again. Hint: you will see it when you get all flights")
+        print("Flight ID invalid, please try again.")
     else:
         print("Flight deleted successfully.")
 
 def delete_passenger(id):
     result = Passenger.delete(id)
     if (result == None):
-        print("Passenger ID invalid, please try again. Hint: you will see it when you get all passengers")
+        print("Passenger ID invalid, please try again.")
     else:
         print("Passenger deleted successfully.")
 
 def delete_booking(id):
     result = Booking.delete(id)
     if (result == None):
-        print("Booking ID invalid, please try again. Hint: you will see it when you get all bookings")
+        print("Booking ID invalid, please try again.")
     else:
         print("Booking deleted successfully.")
 
 def find_flight(id):
     result = Flight.find_by_id(id)
     if (result == None):
-        print("Flight ID invalid, please try again. Hint: you will see it when you get all flights")
+        print("Flight ID invalid, please try again.")
         return None
     else:
         print("Found flight:")
@@ -67,7 +67,7 @@ def find_flight(id):
 def find_passenger(id):
     result = Passenger.find_by_id(id)
     if (result == None):
-        print("Passenger ID invalid, please try again. Hint: you will see it when you get all passengers")
+        print("Passenger ID invalid, please try again.")
     else:
         print("Found flight:")
         Passenger.print_passenger_info(result)
@@ -76,7 +76,7 @@ def find_passenger(id):
 def find_booking(id):
     result = Booking.find_by_id(id)
     if (result == None):
-        print("Booking ID invalid, please try again. Hint: you will see it when you get all bookings")
+        print("Booking ID invalid, please try again.")
     else:
         print("Found booking:")
         Booking.print_booking_info(result)
@@ -85,7 +85,7 @@ def find_booking(id):
 def all_passengers_per_flight(flight):
     result = flight.passengers()
     if (result == []):
-        print("Flight ID invalid, please try again. Hint: you will see it when you get all flights")
+        print("Flight ID invalid or no available passengers, please try again.")
     else:
         print("Found passengers:")
         for passenger in result:
@@ -94,7 +94,7 @@ def all_passengers_per_flight(flight):
 def all_flights_per_passenger(passenger):
     result = passenger.flights()
     if (result == []):
-        print("Passenger ID invalid, please try again. Hint: you will see it when you get all passengers")
+        print("Passenger ID invalid or no available flights, please try again.")
     else:
         print("Found flights:")
         for flight in result:
@@ -103,7 +103,7 @@ def all_flights_per_passenger(passenger):
 def all_bookings_per_flight(flight):
     result = flight.bookings()
     if (result == []):
-        print("Passenger ID invalid, please try again. Hint: you will see it when you get all passengers")
+        print("Flight ID invalid or no available bookings, please try again.")
     else:
         print("Found bookings:")
         for booking in result:
@@ -112,7 +112,7 @@ def all_bookings_per_flight(flight):
 def all_bookings_per_passenger(passenger):
     result = passenger.bookings()
     if (result == []):
-        print("Passenger ID invalid, please try again. Hint: you will see it when you get all passengers")
+        print("Passenger ID invalid or no avail bookings, please try again.")
     else:
         print("Found bookings:")
         for booking in result:
@@ -122,7 +122,7 @@ def all_booking_info(booking):
     flight = Flight.find_by_id(booking.flight_id)
     passenger = Passenger.find_by_id(booking.passenger_id)
     if flight == None or passenger == None:
-        print("Passenger / flight invalid, please try again. Hint: Check the booking and make sure the ids are present in passenger / flight.")
+        print("Passenger / flight ID invalid, please try again.")
     else:
         Flight.print_flight_info(flight)
         Passenger.print_passenger_info(passenger)

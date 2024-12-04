@@ -203,12 +203,15 @@ class Passenger:
 
     @classmethod
     def create(cls, first_name, last_name, age, passport):
-        new_passenger = cls(first_name, last_name, age, passport)
-        if cls.check_if_passport_exists(new_passenger):
-            return None
-        else:
-            new_passenger.save()
-            return new_passenger
+        try:
+            new_passenger = cls(first_name, last_name, age, passport)
+            if cls.check_if_passport_exists(new_passenger):
+                return None
+            else:
+                new_passenger.save()
+                return new_passenger
+        except:
+            print("Flight info invalid, please try again.")
 
     @classmethod
     def create_instance(cls, passenger):
@@ -241,7 +244,7 @@ class Passenger:
         """
         sql_booking = '''
             DELETE FROM bookings
-            WHERE flight_id = ?
+            WHERE passenger_id = ?
         '''
         if passenger_to_delete:
             CURSOR.execute(sql, (passenger_to_delete.id,))
@@ -251,3 +254,6 @@ class Passenger:
             return 'Successfully deleted'
         else:
             return None
+        
+    def __repr__(self):
+        return f"<Passenger id={self.id} first_name={self.first_name} last_name={self.last_name} age={self.age} passport={self.passport}>"

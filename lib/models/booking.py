@@ -165,9 +165,12 @@ class Booking:
             print("Flight id does not exist. Try another one.")
             return None
         else:
-            new_booking = cls(passenger_id, flight_id, seat)
-            new_booking.save()
-            return new_booking
+            try:
+                new_booking = cls(passenger_id, flight_id, seat)
+                new_booking.save()
+                return new_booking
+            except:
+                print("Booking info invalid, please try again.")
 
     @classmethod
     def create_instance(cls, booking):
@@ -205,4 +208,4 @@ class Booking:
             return None
 
     def __repr__(self):
-        return f"<Order passenger={self.passenger.first_name}, {self.passenger.l}  flight={self.flight.name}>"
+        return f"<Booking passenger_id={self.passenger_id}, flight_id={self.flight_id} seat={self.seat} id={self.id}>"
