@@ -77,15 +77,13 @@ class Flight:
 
     @departure_time.setter
     def departure_time(self, new_departure_time):
-        # try:
-        #     datetime.fromisoformat(new_departure)
-        # except:
-        #     raise ValueError("flight departure must be valid date and time")
-
         if isinstance(new_departure_time, str):
-            self._departure_time = new_departure_time
+            if 0 < len(new_departure_time) <= 10:
+                self._departure_time = new_departure_time
+            else:
+                return ValueError("Departure time must be 1-10 char.")
         else:
-            raise ValueError("flight departure must be a str")
+            raise TypeError("Flight departure time must be a str")
     
     @property
     def arrival_time(self):
@@ -94,9 +92,12 @@ class Flight:
     @arrival_time.setter
     def arrival_time(self, new_arrival_time):
         if isinstance(new_arrival_time, str):
-            self._arrival_time = new_arrival_time
+            if 0 < len(new_arrival_time) <= 10:
+                self._arrival_time = new_arrival_time
+            else:
+                return ValueError("Arrival time must be 1-10 char.")
         else:
-            raise ValueError("Flight arrival must be a str")
+            raise ValueError("Flight arrival time must be a str")
 
     def bookings(self):
         from models.booking import Booking

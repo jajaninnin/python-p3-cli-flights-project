@@ -203,7 +203,7 @@ def create_booking_cli_options():
     print("Please select an option:")
     passenger_id = input("Passenger ID: > ")
     flight_id = input("Flight ID > ")
-    seat = input("Seat: > ")
+    seat = input("Seat(11A format) > ")
     new_booking = create_booking(passenger_id, flight_id, seat)
     if new_booking != None:
         Booking.print_booking_info(new_booking)

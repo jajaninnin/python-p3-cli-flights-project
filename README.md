@@ -12,37 +12,43 @@ Welcome aboard!
 
 ## Generating Your Environment
 
-1. Install and run the commands in your terminal:
+1. Fork and clone this repository:
+
+Clone this repository in your terminal: [github](git@github.com:jajaninnin/python-p3-cli-flights-project.git)
+
+Navigate to the project directory in your terminal: cd python-p3-v2-final-project-template
+
+2. Install and run the commands in your terminal:
 
 ```console
 pipenv install
 ```
 
-2. Run or activate your virtual environment in your terminal:
+3. Run or activate your virtual environment in your terminal:
 
 ```console
 pipenv shell
 ```
 
-3. Change your directory in your terminal:
+4. Change your directory in your terminal:
 
 ```console
 cd lib
 ```
 
-4. Run the python CLI file in your terminal:
+5. Run the python CLI file in your terminal:
 
 ```console
 python cli.py
 ```
 
-OPTIONAL: You can skip step 3 and 4, by directly running the CLI file from your virtual environment by typing this on your terminal:
+**OPTIONAL:** You can skip step 4 and 5, by directly running the CLI file from your virtual environment by typing this on your terminal:
 
 ```console
 python lib/cli.py
 ```
 
-You can only pick either step 3&4 or Optional.
+You can only pick either step 4&5 or Optional route.
 
 ---
 

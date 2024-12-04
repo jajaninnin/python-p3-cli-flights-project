@@ -18,28 +18,6 @@ class Booking:
     def add_new_booking(cls, new_booking):
         cls.all.append(new_booking)
     
-    # @property
-    # def passenger_id(self):
-    #     return self._passenger_id
-
-    # @passenger_id.setter
-    # def passenger(self, new_passenger_id):
-    #     if isinstance(new_passenger_id, Passenger.id):
-    #         self._passenger_id = new_passenger_id
-    #     else: 
-    #         raise TypeError("Must be of type Passenger.")
-
-    # @property
-    # def flight_id(self):
-    #     return self._flight 
-
-    # @flight_id.setter
-    # def flight_id(self, new_flight_id):
-    #     if isinstance(new_flight_id, Flight.id):
-    #         self._flight_id = new_flight_id
-    #     else:
-    #         raise TypeError("Must be of type Flight")
-    
     @property
     def seat(self):
         return self._seat
@@ -47,10 +25,10 @@ class Booking:
     @seat.setter
     def seat(self, new_seat):
         if isinstance(new_seat, str):
-            if 0 < len(new_seat) <= 3:
+            if 0 < len(new_seat) <= 4:
                 self._seat = new_seat.upper()
             else:
-                raise ValueError("Seat must be 1-3 char.")
+                raise ValueError("Seat must be 1-4 char.")
         else:
             raise TypeError("Seat must be a str")
    
