@@ -20,7 +20,7 @@ class Passenger:
     def first_name(self, new_first_name):
         if isinstance(new_first_name, str):
             if 0 < len(new_first_name) <= 12:
-                self._first_name = new_first_name.capitalize()
+                self._first_name = new_first_name.title()
             else:
                 raise ValueError("Passenger first name must be 1-12 char.")
         else:
@@ -34,7 +34,7 @@ class Passenger:
     def last_name(self, new_last_name):
         if isinstance(new_last_name, str):
             if 0 < len(new_last_name) <= 12:
-                self._last_name = new_last_name.capitalize()
+                self._last_name = new_last_name.title()
             else:
                 raise ValueError("Passenger last name must be 1-12 char.")
         else:
