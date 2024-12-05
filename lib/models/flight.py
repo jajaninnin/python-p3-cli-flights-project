@@ -35,14 +35,19 @@ class Flight:
 
     @number.setter
     def number(self, new_number):
-        if isinstance(new_number, int):
-            if (0 < len(str(new_number)) <= 5):
-                self._number = new_number
+        try: 
+            numberAsInt = int(new_number)
+            if isinstance(numberAsInt, int):
+                if (0 < len(str(numberAsInt)) <= 5):
+                    self._number = numberAsInt
+                else:
+                    return ValueError("Flight number must be between 1 and 5 digits.")
             else:
-                return ValueError("Flight number must be between 1 and 5 digits.")
-        else:
-            raise TypeError("Flight number must be an int")
-    
+                raise TypeError("Flight number must be an int")
+        except:
+            print("Flight number is not a valid number")
+            return TypeError("Not a valid number")
+       
     @property
     def origin(self):
         return self._origin

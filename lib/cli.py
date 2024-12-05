@@ -78,8 +78,8 @@ def flight_options():
 
 def create_flight_cli_options():
     print("Please select an option:")
-    name = input("Flight Name > ") 
-    number = input("Flight number > ")
+    name = input("Flight Name(1-6 char) > ") 
+    number = input("Flight number(1-5 char, must be a number) > ")
     origin = input("Origin City(ABC format) > ")
     destination = input("Destination City(ABC format) > ")
     departure_time = input("Departure Time((00:00 am) format) > ")
@@ -140,10 +140,10 @@ def passenger_options():
 
 def create_passenger_cli_options():
     print("Please select an option:")
-    first_name = input("First name > ")
-    last_name = input("Last name > ")
-    age = input("Age > ")
-    passport = input("Passport > ")
+    first_name = input("First name(1-10 char) > ")
+    last_name = input("Last name(1-10 char) > ")
+    age = input("Age(0-120) > ")
+    passport = input("Passport(5-10 char) > ")
     new_passenger = create_passenger(first_name, last_name, age, passport)
     if (new_passenger != None):
         Passenger.print_passenger_info(new_passenger)

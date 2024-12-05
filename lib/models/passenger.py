@@ -46,13 +46,18 @@ class Passenger:
 
     @age.setter
     def age(self, new_age):
-        if isinstance(new_age, int):
-            if (0 < new_age <= 120):
-                self._age = new_age
+        try:
+            ageasInt = int(new_age)
+            if isinstance(ageasInt, int):
+                if (0 < ageasInt <= 120):
+                    self._age = ageasInt
+                else:
+                    return ValueError("Age must be between 0 to 120 years old.")
             else:
-                return ValueError("Age must be between 0 to 120 years old.")
-        else:
-            raise TypeError("Age must be a int")
+                raise TypeError("Age must be a int")
+        except:
+            print("Passenger age is not a valid number")
+            return TypeError("Not a valid number")
 
     @property
     def passport(self):
@@ -61,10 +66,10 @@ class Passenger:
     @passport.setter
     def passport(self, new_passport):
         if isinstance(new_passport, str):
-            if 0 < len(new_passport) <= 10:
+            if 4 < len(new_passport) <= 10:
                 self._passport = new_passport.upper()
             else:
-                raise ValueError("Passenger passport must be 1-10 char.")
+                raise ValueError("Passenger passport must be 5-10 char.")
         else:
             raise TypeError("Passenger passport must be a str")
     
