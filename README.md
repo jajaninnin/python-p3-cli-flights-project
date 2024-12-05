@@ -1,4 +1,4 @@
-# <span style="color: cyan">Jet Set Go!</span> 🛬
+# Jet Set Go! 🛬
 
 ## Phase 3 CLI + ORM Project 🛬
 
