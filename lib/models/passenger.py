@@ -22,7 +22,7 @@ class Passenger:
             if 0 < len(new_first_name) <= 12:
                 self._first_name = new_first_name.capitalize()
             else:
-                return ValueError("Passenger first name must be 1-12 char.")
+                raise ValueError("Passenger first name must be 1-12 char.")
         else:
             raise TypeError("Passenger first name must be a str")
     
@@ -36,7 +36,7 @@ class Passenger:
             if 0 < len(new_last_name) <= 12:
                 self._last_name = new_last_name.capitalize()
             else:
-                return ValueError("Passenger last name must be 1-12 char.")
+                raise ValueError("Passenger last name must be 1-12 char.")
         else:
             raise TypeError("Passenger last name must be a str")
     
@@ -52,12 +52,12 @@ class Passenger:
                 if (0 < ageasInt <= 120):
                     self._age = ageasInt
                 else:
-                    return ValueError("Age must be between 0 to 120 years old.")
+                    raise ValueError("Age must be between 0 to 120 years old.")
             else:
                 raise TypeError("Age must be a int")
         except:
             print("Passenger age is not a valid number")
-            return TypeError("Not a valid number")
+            raise TypeError("Not a valid number")
 
     @property
     def passport(self):

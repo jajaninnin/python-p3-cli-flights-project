@@ -39,7 +39,7 @@ class Booking:
             WHERE seat = ?
             AND flight_id = ?
         '''
-        seat_already_booked = CURSOR.execute(sql, (new_seat, flight_id)).fetchone()
+        seat_already_booked = CURSOR.execute(sql, (new_seat.upper(), flight_id)).fetchone()
         if (seat_already_booked):
             print("Seat is already booked, try another one")
             return True

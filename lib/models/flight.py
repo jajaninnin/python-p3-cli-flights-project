@@ -41,12 +41,12 @@ class Flight:
                 if (0 < len(str(numberAsInt)) <= 5):
                     self._number = numberAsInt
                 else:
-                    return ValueError("Flight number must be between 1 and 5 digits.")
+                    raise ValueError("Flight number must be between 1 and 5 digits.")
             else:
                 raise TypeError("Flight number must be an int")
         except:
             print("Flight number is not a valid number")
-            return TypeError("Not a valid number")
+            raise TypeError("Not a valid number")
        
     @property
     def origin(self):
@@ -58,7 +58,7 @@ class Flight:
             if 0 < len(new_origin) <= 4:
                 self._origin = new_origin.upper()
             else:
-                return ValueError("Flight origin must be 1-4 char.")
+                raise ValueError("Flight origin must be 1-4 char.")
         else:
             raise TypeError("Flight origin must be a str")
 
@@ -72,7 +72,7 @@ class Flight:
             if 0 < len(new_destination) <= 4:
                 self._destination = new_destination.upper()
             else:
-                return ValueError("Flight destination must be 1-4 char.")
+                raise ValueError("Flight destination must be 1-4 char.")
         else:
             raise TypeError("Flight destination must be a str")
     
@@ -86,7 +86,7 @@ class Flight:
             if 0 < len(new_departure_time) <= 10:
                 self._departure_time = new_departure_time
             else:
-                return ValueError("Departure time must be 1-10 char.")
+                raise ValueError("Departure time must be 1-10 char.")
         else:
             raise TypeError("Flight departure time must be a str")
     
@@ -100,7 +100,7 @@ class Flight:
             if 0 < len(new_arrival_time) <= 10:
                 self._arrival_time = new_arrival_time
             else:
-                return ValueError("Arrival time must be 1-10 char.")
+                raise ValueError("Arrival time must be 1-10 char.")
         else:
             raise ValueError("Flight arrival time must be a str")
 
