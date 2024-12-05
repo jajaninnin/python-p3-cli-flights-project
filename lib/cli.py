@@ -84,7 +84,7 @@ def create_flight_cli_options():
     destination = input("Destination City(ABC format) > ")
     departure_time = input("Departure Time((00:00 am) format) > ")
     arrival_time = input("Arrival Time(00:00 am) format > ")
-    new_flight = create_flight(name, int(number), origin, destination, departure_time, arrival_time)
+    new_flight = create_flight(name, number, origin, destination, departure_time, arrival_time)
     if new_flight != None:
         Flight.print_flight_info(new_flight)
 
@@ -144,7 +144,7 @@ def create_passenger_cli_options():
     last_name = input("Last name > ")
     age = input("Age > ")
     passport = input("Passport > ")
-    new_passenger = create_passenger(first_name, last_name, int(age), passport)
+    new_passenger = create_passenger(first_name, last_name, age, passport)
     if (new_passenger != None):
         Passenger.print_passenger_info(new_passenger)
 

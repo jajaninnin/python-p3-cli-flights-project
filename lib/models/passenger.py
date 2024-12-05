@@ -211,7 +211,7 @@ class Passenger:
                 new_passenger.save()
                 return new_passenger
         except:
-            print("Flight info invalid, please try again.")
+            print("Passenger info invalid, please try again.")
 
     @classmethod
     def create_instance(cls, passenger):
