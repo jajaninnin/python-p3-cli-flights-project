@@ -140,8 +140,8 @@ def passenger_options():
 
 def create_passenger_cli_options():
     print("Please select an option:")
-    first_name = input("First name(1-10 char) > ")
-    last_name = input("Last name(1-10 char) > ")
+    first_name = input("First name(1-12 char) > ")
+    last_name = input("Last name(1-12 char) > ")
     age = input("Age(0-120) > ")
     passport = input("Passport(5-10 char) > ")
     new_passenger = create_passenger(first_name, last_name, age, passport)

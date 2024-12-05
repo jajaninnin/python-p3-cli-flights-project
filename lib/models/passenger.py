@@ -19,10 +19,10 @@ class Passenger:
     @first_name.setter
     def first_name(self, new_first_name):
         if isinstance(new_first_name, str):
-            if 0 < len(new_first_name) <= 10:
+            if 0 < len(new_first_name) <= 12:
                 self._first_name = new_first_name.capitalize()
             else:
-                return ValueError("Passenger first name must be 1-10 char.")
+                return ValueError("Passenger first name must be 1-12 char.")
         else:
             raise TypeError("Passenger first name must be a str")
     
@@ -33,10 +33,10 @@ class Passenger:
     @last_name.setter
     def last_name(self, new_last_name):
         if isinstance(new_last_name, str):
-            if 0 < len(new_last_name) <= 10:
+            if 0 < len(new_last_name) <= 12:
                 self._last_name = new_last_name.capitalize()
             else:
-                return ValueError("Passenger last name must be 1-10 char.")
+                return ValueError("Passenger last name must be 1-12 char.")
         else:
             raise TypeError("Passenger last name must be a str")
     
