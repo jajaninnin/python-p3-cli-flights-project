@@ -106,6 +106,18 @@ If the user picked "Find a booking by ID", the user has to input a valid booking
 
 ---
 
+## Room for Improvement
+
+One of the features that can be improved in the future, is making sure the times and dates are validated per flight.
+
+The flights can also be only selected from all the listed airports in the world. In short, a user cannot make up a random new airport code per city.  There can be a known list of airports to validate the city.
+
+Another note of improvement would be adding prices to the flights, therefore having a total price per passenger on all his bookings. We can also add a feature wherein the user can find a flight, passenger by name or any of the attributes instead of the id. 
+
+The user should be able to update a passenger information, booking information, and flight information. 
+
+---
+
 ## Contributions 🛬
 
 We welcome contributions!
